@@ -1,6 +1,6 @@
 <div class="fixed">
   
-  <button class='btn btn-primary btn-large' data-placement='top' title="User Login Info." href='#'>Login Details.</button>
+  <button class=' btn-primary btn-large' data-placement='top' title="User Login Info." href='#'>Login Details.</button>
 
   <div id="popover_content_wrapper" style="display: none">
 
@@ -10,7 +10,11 @@
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></br>
+          <%= link_to "Log in with Twitter",user_omniauth_authorize_path(:twitter) %></br>
+          <%= link_to "Log in with Linkedin",user_omniauth_authorize_path(:linkedin) %></br>
+          <%= link_to "Log in with Google", user_omniauth_authorize_path(:google_oauth2) %>
+
         <% end %>
 
   </div>
@@ -18,7 +22,7 @@
 
 <script>
   $(document).ready(function(){
-    $('.btn ').popover({ 
+    $('.btn-primary ').popover({ 
       html : true,
       content: function() {
         return $('#popover_content_wrapper').html();

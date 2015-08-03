@@ -7,7 +7,7 @@ class TeamMembersController < InheritedResources::Base
   private
 
     def team_member_params
-      params.require(:team_member).permit(:name, :image, :designation)
+      params.require(:team_member).permit(:name, :image, :designation, :twitter_link, :facebook_link, :linkedin_link)
     end
 end
 

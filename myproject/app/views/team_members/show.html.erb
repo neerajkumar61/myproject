@@ -9,6 +9,9 @@
   <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
   <dd><%= @team_member.image %></dd>
   <dt><strong><%= model_class.human_attribute_name(:designation) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:twitter_link) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:facebook_link) %>:</strong></dt>
+  <dt><strong><%= model_class.human_attribute_name(:linkedin_link) %>:</strong></dt>
   <dd><%= @team_member.designation %></dd>
 </dl>
 
@@ -21,3 +24,7 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+
+
+
+ :twitter_link, :facebook_link, :linkedin_link

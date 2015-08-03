@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731195530) do
+ActiveRecord::Schema.define(version: 20150803053817) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -27,8 +27,11 @@ ActiveRecord::Schema.define(version: 20150731195530) do
     t.string   "name"
     t.string   "image"
     t.string   "designation"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "twitter_link"
+    t.string   "facebook_link"
+    t.string   "linkedin_link"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,6 +47,8 @@ ActiveRecord::Schema.define(version: 20150731195530) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

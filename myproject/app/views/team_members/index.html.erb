@@ -9,6 +9,9 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:image) %></th>
       <th><%= model_class.human_attribute_name(:designation) %></th>
+      <th><%= model_class.human_attribute_name(:twitter_link) %></th>
+      <th><%= model_class.human_attribute_name(:facebook_link) %></th>
+      <th><%= model_class.human_attribute_name(:linkedin_link) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -20,6 +23,9 @@
         <td><%= team_member.name %></td>
         <td><%= team_member.image %></td>
         <td><%= team_member.designation %></td>
+        <td><%= team_member.twitter_link %></td>
+        <td><%= team_member.facebook_link %></td>
+        <td><%= team_member.linkedin_link %></td>
         <td><%=l team_member.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -38,3 +44,6 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_team_member_path,
             :class => 'btn btn-primary' %>
+
+
+

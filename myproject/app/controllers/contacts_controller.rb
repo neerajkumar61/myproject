@@ -27,7 +27,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
 
     respond_to do |format|
-      if @contact.save_with_captcha
+      if @contact.save
         ContactMailer.contact_email(@contact).deliver
         format.html { redirect_to :back, notice: 'Contact was successfully created.' }
         format.json { render :show, status: :created, location: @contact }
