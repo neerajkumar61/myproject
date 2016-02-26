@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  resources :team_members
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  # devise_for :users
   resources :contacts
-  resources :contact_us
+  # resources :contact_us
   get 'welcome/homepage'
 
   # The priority is based upon order of creation: first created -> highest priority.

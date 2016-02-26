@@ -61,18 +61,39 @@
 
 
     <!-- Team Section -->
-
+]
     <%= render partial: "welcome/team" %>
-    
 
+    <%#= render :template => 'team_members/index' %>
     <!-- Clients Aside -->
 
     <%= render partial: "welcome/clients" %>
+    
+
+
+
+
+    <!-- word rotator -->
+    
+    <section class="rw-wrapper">
+    <h2 class="rw-sentence">
+
+        <span>with a silent touch of</span>
+        <div class="rw-words rw-words-2">
+            <span>sugar</span>
+            <span>spice</span>
+            <span>colors</span>
+            <span>Love</span>
+            <span>wonder</span>
+        </div>
+    </h2>
+    </section>
+    
 
 
     <!-- Contact Section -->
 
-    <%= render partial: "contacts/form" %>
+    <%= render partial: "welcome/contact_us" %>
 
 
     <!-- Map Section -->
@@ -118,22 +139,6 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

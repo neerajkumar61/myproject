@@ -262,4 +262,12 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  require 'omniauth-twitter'
+  require 'omniauth-linkedin'
+  require 'omniauth-google-oauth2'
+  config.omniauth :google_oauth2, "3148347282-8gmi2g30b336n0ph6q1qvefp08kj4fte.apps.googleusercontent.com", "ok48l1XcO0qLeEXmDllWjQD0", { access_type: "offline", approval_prompt: "" }
+  config.omniauth :linkedin, "75xd3s69afpei4", "X5JfBG7kNAFejyli"
+  config.omniauth :facebook, "973828949326518", "3197c39bf6ca9f28a85c5890e4ca3845", scope: 'email', info_fields: 'email'
+  config.omniauth :twitter, "ywTtbP5P4fXADnuDtEn3jAV5C", "21RUFxFFgPEMnuQQ2uqBay0mqA0mGEkfdIXdeq6K3ZtdnfdxK7"
+#   config.omniauth :linked_in, "KEY", "SECRET"
 end
